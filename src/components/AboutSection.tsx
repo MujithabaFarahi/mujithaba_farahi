@@ -15,14 +15,16 @@ export function AboutSection() {
         <div className="grid items-center gap-8 md:grid-cols-2">
           <div className="space-y-4">
             <p className="text-lg leading-relaxed">
-              I'm a passionate full-stack developer with over 5 years of
-              experience building web applications. I love turning complex
-              problems into simple, beautiful, and intuitive solutions.
+              I'm a passionate full-stack developer currently pursuing a degree
+              in Software Engineering, with hands-on experience building web and
+              mobile applications using technologies like React, Node.js, and
+              Flutter. I enjoy crafting clean, scalable, and user-friendly
+              solutions that solve real-world problems.
             </p>
             <p className="text-lg leading-relaxed">
-              When I'm not coding, you can find me exploring new technologies,
-              contributing to open-source projects, or sharing my knowledge
-              through blog posts and mentoring.
+              When I’m not coding, you’ll likely find me exploring new tech,
+              working on side projects, or staying active through sports and
+              outdoor activities.
             </p>
           </div>
 
@@ -31,23 +33,40 @@ export function AboutSection() {
               <h3 className="mb-4 text-xl font-semibold">
                 Skills & Technologies
               </h3>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <h4 className="mb-2 font-medium">Frontend</h4>
                   <ul className="space-y-1 text-sm text-muted-foreground">
-                    <li>React / Next.js</li>
-                    <li>TypeScript</li>
+                    <li>React.js</li>
+                    <li>Next.js</li>
+                    <li>Flutter</li>
                     <li>Tailwind CSS</li>
-                    <li>Vue.js</li>
                   </ul>
                 </div>
                 <div>
                   <h4 className="mb-2 font-medium">Backend</h4>
                   <ul className="space-y-1 text-sm text-muted-foreground">
                     <li>Node.js</li>
-                    <li>Python</li>
-                    <li>PostgreSQL</li>
+                    <li>Express.js</li>
+                    <li>REST Api</li>
+                    <li>Prisma ORM</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="mb-2 font-medium">Databases</h4>
+                  <ul className="space-y-1 text-sm text-muted-foreground">
                     <li>MongoDB</li>
+                    <li>PostgreSQL</li>
+                    <li>MySQL</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="mb-2 font-medium">Tools & DevOps</h4>
+                  <ul className="space-y-1 text-sm text-muted-foreground">
+                    <li>Git & GitHub</li>
+                    <li>Docker</li>
+                    <li>Firebase</li>
+                    <li>AWS (S3, Pinpoint)</li>
                   </ul>
                 </div>
               </div>

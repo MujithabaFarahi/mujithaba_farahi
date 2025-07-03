@@ -12,20 +12,29 @@ interface Education {
 
 const education: Education[] = [
   {
-    degree: 'Master of Science in Computer Science',
-    institution: 'Stanford University',
-    period: '2017 - 2019',
+    degree: 'BEng (Hons) in Software Engineering',
+    institution:
+      'Informatics Institute of Technology (IIT) – Affiliated with University of Westminster',
+    period: '2021 - Present',
     description:
-      "Specialized in Machine Learning and Web Technologies. Thesis on 'Scalable Web Application Architecture'.",
-    gpa: '3.8/4.0',
+      'Focused on software architecture, full-stack development, algorithms, and engineering best practices through academic and project-based learning.',
+    gpa: '',
   },
   {
-    degree: 'Bachelor of Science in Software Engineering',
-    institution: 'University of California, Berkeley',
-    period: '2013 - 2017',
+    degree: 'G.C.E. Advanced Level (Physical Science Stream)',
+    institution: 'D.S. Senanayake College, Colombo',
+    period: '2012 - 2020',
     description:
-      'Comprehensive study of software development principles, algorithms, and system design.',
-    gpa: '3.7/4.0',
+      'Specialized in Mathematics, Physics, and ICT, building a strong analytical and logical foundation for software development.',
+    gpa: '',
+  },
+  {
+    degree: 'Primary and Junior Secondary Education',
+    institution: 'Nangalla Muslim Maha Vidyalaya',
+    period: '2007 - 2012',
+    description:
+      'Completed foundational education with a focus on literacy, numeracy, and general knowledge.',
+    gpa: '',
   },
 ];
 

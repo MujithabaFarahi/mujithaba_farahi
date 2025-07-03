@@ -14,40 +14,23 @@ interface Certificate {
 
 const certificates: Certificate[] = [
   {
-    title: 'AWS Certified Solutions Architect',
-    issuer: 'Amazon Web Services',
-    date: '2023',
-    credentialId: 'AWS-SAA-123456',
-    verifyUrl: 'https://aws.amazon.com/verification',
+    title: 'MERN Developer Certificate',
+    issuer: 'University of Colombo School of Computing',
+    date: '2024 Feb',
+    credentialId: 'CSC/MS/2023/GR_02/021',
+    verifyUrl: 'https://ucsc.cmb.ac.lk/verify/CSC/MS/2023/GR_02/021',
     description:
-      'Demonstrated expertise in designing distributed systems on AWS platform with focus on scalability, security, and cost optimization.',
+      'Completed a full-stack development course covering MongoDB, Express.js, React, and Node.js, with hands-on project experience.',
   },
   {
-    title: 'Google Cloud Professional Developer',
-    issuer: 'Google Cloud',
-    date: '2022',
-    credentialId: 'GCP-PD-789012',
-    verifyUrl: 'https://cloud.google.com/certification',
+    title: 'CS50x – Introduction to Computer Science',
+    issuer: 'Harvard University (via edX)',
+    date: '2024 Jan',
+    credentialId: 'd28ca4f9-7913-4d16-8369-c5690e87812b',
+    verifyUrl:
+      'https://certificates.cs50.io/d28ca4f9-7913-4d16-8369-c5690e87812b.pdf?size=A4',
     description:
-      'Certified in building scalable and reliable applications on Google Cloud Platform using best practices and cloud-native technologies.',
-  },
-  {
-    title: 'Meta React Developer Certificate',
-    issuer: 'Meta (Facebook)',
-    date: '2022',
-    credentialId: 'META-RD-345678',
-    verifyUrl: 'https://developers.facebook.com/certification',
-    description:
-      'Comprehensive certification covering React fundamentals, advanced patterns, testing, and performance optimization techniques.',
-  },
-  {
-    title: 'MongoDB Certified Developer',
-    issuer: 'MongoDB University',
-    date: '2021',
-    credentialId: 'MDB-DEV-901234',
-    verifyUrl: 'https://university.mongodb.com/certification',
-    description:
-      'Expertise in MongoDB database design, querying, indexing, and application development with MongoDB drivers.',
+      'Completed Harvard’s introductory course covering algorithms, data structures, web development, and fundamental computer science principles.',
   },
 ];
 
@@ -88,10 +71,12 @@ export function CertificatesSection() {
                   {cert.description}
                 </p>
                 {cert.verifyUrl && (
-                  <Button size="sm" variant="outline" className="gap-2">
-                    <ExternalLink className="w-4 h-4" />
-                    Verify Certificate
-                  </Button>
+                  <a href={cert.verifyUrl} target="_blank">
+                    <Button size="sm" variant="outline" className="gap-2">
+                      <ExternalLink className="w-4 h-4" />
+                      Verify Certificate
+                    </Button>
+                  </a>
                 )}
               </CardContent>
             </Card>

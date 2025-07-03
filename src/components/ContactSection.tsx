@@ -5,14 +5,44 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { toast } from 'sonner';
+import { useState } from 'react';
 
 export function ContactSection() {
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted');
+
+    setIsLoading(true);
+    const form = new FormData(e.currentTarget);
+
+    try {
+      const res = await fetch(
+        'https://script.google.com/macros/s/AKfycbyLI1MWBnTllf7VxjQrDAJP2LpUPGCkDt5C7WWzt0GBnUaHjJ1c7Mg7uIdqDokhm85K/exec',
+        {
+          method: 'POST',
+          body: form,
+        }
+      );
+
+      if (!res.ok) throw new Error('Failed to send');
+
+      setIsLoading(false);
+
+      toast.success('Message sent successfully!');
+    } catch (err) {
+      console.error('Submit error:', err);
+      setIsLoading(false);
+      toast.error('Failed to send message.', {
+        description: 'Please try again later.',
+      });
+    }
   };
 
+  // https://script.google.com/macros/s/AKfycbxGPQ_VVLEXu6ra13OTAEJWpvdflaObeh6doYgqNRBM9nIKovZ5_vyr-Rl4KyOAzgsy/exec
+  // https://script.google.com/macros/s/AKfycbxAGfl0q0AzlRkfomviWzQkPaAbOiXaIlImXLKPJMu0QCabZSb-B2QVikUQlMNHXZn8/exec
+  // AKfycbxAGfl0q0AzlRkfomviWzQkPaAbOiXaIlImXLKPJMu0QCabZSb-B2QVikUQlMNHXZn8
   return (
     <section id="contact" className="container py-16 ">
       <div className="space-y-8">
@@ -27,38 +57,35 @@ export function ContactSection() {
         <div className="grid gap-8 md:grid-cols-2">
           <div className="space-y-6">
             <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Mail className="w-5 h-5" />
-                  Email
-                </CardTitle>
-              </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">john.doe@example.com</p>
+                <div className="flex items-center gap-2 font-semibold mb-2">
+                  <Mail className="w-5 h-5" /> Email
+                </div>
+                <a href="mailto:mujithaba2001@gmail.com">
+                  <p className="text-muted-foreground">
+                    mujithaba2001@gmail.com
+                  </p>
+                </a>
               </CardContent>
             </Card>
 
             <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Phone className="w-5 h-5" />
-                  Phone
-                </CardTitle>
-              </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                <div className="flex items-center gap-2 font-semibold mb-2">
+                  <Phone className="w-5 h-5" /> Phone
+                </div>
+                <a href="mailto:mujithaba2001@gmail.com">
+                  <p className="text-muted-foreground">+94 (71) 430 9476</p>
+                </a>
               </CardContent>
             </Card>
 
             <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <MapPin className="w-5 h-5" />
-                  Location
-                </CardTitle>
-              </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">San Francisco, CA</p>
+                <div className="flex items-center gap-2 font-semibold mb-2">
+                  <MapPin className="w-5 h-5" /> Location
+                </div>
+                <p className="text-muted-foreground">Colombo, Sri Lanka.</p>
               </CardContent>
             </Card>
           </div>
@@ -70,17 +97,22 @@ export function ContactSection() {
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
-                  <Input placeholder="First Name" required />
-                  <Input placeholder="Last Name" required />
+                  <Input name="firstName" placeholder="First Name" required />
+                  <Input name="lastName" placeholder="Last Name" required />
                 </div>
-                <Input type="email" placeholder="Email" required />
-                <Input placeholder="Subject" required />
+                <Input name="email" type="email" placeholder="Email" required />
+                <Input name="subject" placeholder="Subject" required />
                 <Textarea
+                  name="message"
                   placeholder="Your message..."
                   className="min-h-[120px]"
                   required
                 />
-                <Button type="submit" className="w-full gap-2">
+                <Button
+                  type="submit"
+                  className="w-full gap-2"
+                  isLoading={isLoading}
+                >
                   <Send className="w-4 h-4" />
                   Send Message
                 </Button>

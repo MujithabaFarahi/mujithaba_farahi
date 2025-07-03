@@ -11,28 +11,20 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
-    title: 'Senior Full Stack Developer',
-    company: 'TechCorp Inc.',
-    period: '2022 - Present',
+    title: 'Intern Full Stack Developer',
+    company: 'Syntax Erreur',
+    period: '2024 May - 2025 June',
     description:
-      'Lead development of scalable web applications serving 100k+ users. Mentored junior developers and implemented CI/CD pipelines.',
-    technologies: ['React', 'Node.js', 'PostgreSQL', 'AWS', 'Docker'],
-  },
-  {
-    title: 'Full Stack Developer',
-    company: 'StartupXYZ',
-    period: '2020 - 2022',
-    description:
-      'Built and maintained multiple client projects from conception to deployment. Collaborated with design team to implement pixel-perfect UIs.',
-    technologies: ['Vue.js', 'Express.js', 'MongoDB', 'Firebase'],
-  },
-  {
-    title: 'Frontend Developer',
-    company: 'WebSolutions Ltd.',
-    period: '2019 - 2020',
-    description:
-      'Developed responsive web applications and improved site performance by 40%. Worked closely with UX team to enhance user experience.',
-    technologies: ['JavaScript', 'React', 'SASS', 'Webpack'],
+      'Contributed to multiple full-stack projects using React, Flutter, and Node.js. Built REST APIs, integrated cloud services like Firebase and AWS, and worked on real-world platforms including POS and recruitment systems.',
+    technologies: [
+      'React',
+      'Flutter',
+      'Node.js',
+      'PostgreSQL',
+      'AWS',
+      'Docker',
+      'Firebase',
+    ],
   },
 ];
 

@@ -22,8 +22,9 @@ export function HeroSection() {
             Hi, I'm <span className="text-primary">Mujithaba Farahi</span>
           </h1>
           <p className="max-w-2xl text-xl md:text-2xl text-muted-foreground">
-            Full Stack Developer & UI/UX Designer passionate about creating
-            beautiful, functional web experiences
+            Full-Stack Developer passionate about building modern, scalable web
+            and mobile applications. I enjoy turning ideas into real-world
+            solutions using technologies like React, Node.js, and Flutter.
           </p>
         </div>
 
@@ -32,10 +33,17 @@ export function HeroSection() {
             <Download className="w-4 h-4" />
             Download Resume
           </Button>
-          <Button variant="outline" className="gap-2">
-            <Github className="w-4 h-4" />
-            GitHub
-          </Button>
+
+          <a
+            href="https://www.github.com/MujithabaFarahi"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="outline" className="gap-2">
+              <Github className="w-4 h-4" />
+              GitHub
+            </Button>
+          </a>
 
           <a
             href="https://www.linkedin.com/in/mujithaba-farahi"
