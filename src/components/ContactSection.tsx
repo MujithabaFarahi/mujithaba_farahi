@@ -40,9 +40,6 @@ export function ContactSection() {
     }
   };
 
-  // https://script.google.com/macros/s/AKfycbxGPQ_VVLEXu6ra13OTAEJWpvdflaObeh6doYgqNRBM9nIKovZ5_vyr-Rl4KyOAzgsy/exec
-  // https://script.google.com/macros/s/AKfycbxAGfl0q0AzlRkfomviWzQkPaAbOiXaIlImXLKPJMu0QCabZSb-B2QVikUQlMNHXZn8/exec
-  // AKfycbxAGfl0q0AzlRkfomviWzQkPaAbOiXaIlImXLKPJMu0QCabZSb-B2QVikUQlMNHXZn8
   return (
     <section id="contact" className="container py-16 ">
       <div className="space-y-8">
@@ -55,7 +52,7 @@ export function ContactSection() {
         </div>
 
         <div className="grid gap-8 md:grid-cols-2">
-          <div className="space-y-6">
+          <div className="space-y-6 flex flex-col justify-center">
             <Card>
               <CardContent>
                 <div className="flex items-center gap-2 font-semibold mb-2">
@@ -74,7 +71,7 @@ export function ContactSection() {
                 <div className="flex items-center gap-2 font-semibold mb-2">
                   <Phone className="w-5 h-5" /> Phone
                 </div>
-                <a href="mailto:mujithaba2001@gmail.com">
+                <a href="tel:+94714309476">
                   <p className="text-muted-foreground">+94 (71) 430 9476</p>
                 </a>
               </CardContent>
@@ -95,6 +92,7 @@ export function ContactSection() {
               <CardTitle>Send a Message</CardTitle>
             </CardHeader>
             <CardContent>
+              {/* <p className="font-semibold mb-2">Send a Message</p> */}
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <Input name="firstName" placeholder="First Name" required />

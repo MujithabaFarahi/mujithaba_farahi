@@ -1,5 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Download, Github, Linkedin, Mail } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 export function HeroSection() {
   const handleResumeDownload = () => {
@@ -13,13 +15,13 @@ export function HeroSection() {
   };
 
   return (
-    <section className="container py-24 md:min-h-screen md:py-32">
-      <div className="flex flex-col items-center space-y-8 text-center">
+    <section className="container py-24 min-h-[90vh] md:py-32 flex justify-center items-center">
+      <div className="space-y-8 text-center">
         <div className="h-10"></div>
 
         <div className="space-y-4">
           <h1 className="text-4xl font-bold tracking-tight md:text-6xl">
-            Hi, I'm <span className="text-primary">Mujithaba Farahi</span>
+            Hi, I'm <TypingName />
           </h1>
           <p className="max-w-2xl text-xl md:text-2xl text-muted-foreground">
             Full-Stack Developer passionate about building modern, scalable web
@@ -56,7 +58,7 @@ export function HeroSection() {
             </Button>
           </a>
 
-          <a href="#contact" className="">
+          <a href="#contact">
             <Button variant="outline" className="gap-2">
               <Mail className="w-4 h-4" />
               Contact Me
@@ -67,3 +69,38 @@ export function HeroSection() {
     </section>
   );
 }
+
+const TypingName = () => {
+  const fullText = 'Mujithaba Farahi';
+  const [displayed, setDisplayed] = useState('');
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+
+    if (index < fullText.length) {
+      timer = setTimeout(() => {
+        setDisplayed((prev) => prev + fullText[index]);
+        setIndex(index + 1);
+      }, 100);
+    } else {
+      // Pause before resetting
+      timer = setTimeout(() => {
+        setDisplayed('');
+        setIndex(0);
+      }, 2000); // 2-second pause at full text
+    }
+
+    return () => clearTimeout(timer);
+  }, [index]);
+
+  return (
+    <motion.span
+      className="text-primary"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
+      {displayed}
+    </motion.span>
+  );
+};
