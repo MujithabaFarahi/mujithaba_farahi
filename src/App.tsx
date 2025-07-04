@@ -4,7 +4,7 @@ import Portfolio from './Pages/Portfolio';
 function App() {
   return (
     <Routes>
-      <Route path="/mujithaba_farahi" element={<Portfolio />} />
+      <Route path="" element={<Portfolio />} />
     </Routes>
   );
 }
