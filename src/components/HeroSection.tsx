@@ -31,7 +31,7 @@ export function HeroSection() {
         </div>
 
         <div className="flex flex-wrap justify-center gap-4">
-          <Button onClick={handleResumeDownload} className="gap-2">
+          <Button onClick={handleResumeDownload} className="gap-2 ">
             <Download className="w-4 h-4" />
             Download Resume
           </Button>
@@ -84,11 +84,10 @@ const TypingName = () => {
         setIndex(index + 1);
       }, 100);
     } else {
-      // Pause before resetting
       timer = setTimeout(() => {
         setDisplayed('');
         setIndex(0);
-      }, 2000); // 2-second pause at full text
+      }, 2000);
     }
 
     return () => clearTimeout(timer);

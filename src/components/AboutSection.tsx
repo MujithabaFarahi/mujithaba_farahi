@@ -38,7 +38,6 @@ export function AboutSection() {
                   <h4 className="mb-2 font-medium">Frontend</h4>
                   <ul className="space-y-1 text-sm text-muted-foreground">
                     <li>React.js</li>
-                    <li>Next.js</li>
                     <li>Flutter</li>
                     <li>Tailwind CSS</li>
                   </ul>

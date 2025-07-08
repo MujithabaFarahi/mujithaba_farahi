@@ -54,10 +54,17 @@ export function ContactSection() {
         <div className="grid gap-8 md:grid-cols-2">
           <div className="space-y-6 flex flex-col justify-center">
             <Card>
+              <CardHeader>
+                <CardTitle>
+                  <div className="flex items-center gap-x-2 ">
+                    <Mail className="w-5 h-5" /> Email
+                  </div>
+                </CardTitle>
+              </CardHeader>
               <CardContent>
-                <div className="flex items-center gap-2 font-semibold mb-2">
+                {/* <div className="flex items-center gap-2 font-semibold mb-2">
                   <Mail className="w-5 h-5" /> Email
-                </div>
+                </div> */}
                 <a href="mailto:mujithaba2001@gmail.com">
                   <p className="text-muted-foreground">
                     mujithaba2001@gmail.com
@@ -67,10 +74,17 @@ export function ContactSection() {
             </Card>
 
             <Card>
+              <CardHeader>
+                <CardTitle>
+                  <div className="flex items-center gap-x-2 ">
+                    <Phone className="w-5 h-5" /> Phone
+                  </div>
+                </CardTitle>
+              </CardHeader>
               <CardContent>
-                <div className="flex items-center gap-2 font-semibold mb-2">
+                {/* <div className="flex items-center gap-2 font-semibold mb-2">
                   <Phone className="w-5 h-5" /> Phone
-                </div>
+                </div> */}
                 <a href="tel:+94714309476">
                   <p className="text-muted-foreground">+94 (71) 430 9476</p>
                 </a>
@@ -78,10 +92,17 @@ export function ContactSection() {
             </Card>
 
             <Card>
+              <CardHeader>
+                <CardTitle>
+                  <div className="flex items-center gap-x-2 ">
+                    <MapPin className="w-5 h-5" /> Location
+                  </div>
+                </CardTitle>
+              </CardHeader>
               <CardContent>
-                <div className="flex items-center gap-2 font-semibold mb-2">
+                {/* <div className="flex items-center gap-2 font-semibold mb-2">
                   <MapPin className="w-5 h-5" /> Location
-                </div>
+                </div> */}
                 <p className="text-muted-foreground">Colombo, Sri Lanka.</p>
               </CardContent>
             </Card>

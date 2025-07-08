@@ -21,11 +21,12 @@ const education: Education[] = [
     gpa: '',
   },
   {
-    degree: 'G.C.E. Advanced Level (Physical Science Stream)',
+    degree:
+      'Secondary Education & G.C.E. Advanced Level (Physical Science Stream)',
     institution: 'D.S. Senanayake College, Colombo',
     period: '2012 - 2020',
     description:
-      'Specialized in Mathematics, Physics, and ICT, building a strong analytical and logical foundation for software development.',
+      'Completed secondary education with Advanced Level specialization in Mathematics, Physics, and ICT, laying a strong foundation in analytical thinking and scientific reasoning.',
     gpa: '',
   },
   {
