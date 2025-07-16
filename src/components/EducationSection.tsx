@@ -30,7 +30,7 @@ const education: Education[] = [
     gpa: '',
   },
   {
-    degree: 'Primary and Junior Secondary Education',
+    degree: 'Primary Education',
     institution: 'Nangalla Muslim Maha Vidyalaya',
     period: '2007 - 2012',
     description:
