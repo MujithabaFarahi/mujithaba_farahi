@@ -24,6 +24,7 @@ const experiences: Experience[] = [
       'AWS',
       'Docker',
       'Firebase',
+      'Prisma ORM',
     ],
   },
 ];
