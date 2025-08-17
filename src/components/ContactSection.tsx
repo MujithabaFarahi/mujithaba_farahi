@@ -55,7 +55,7 @@ export function ContactSection() {
           <div className="space-y-6 flex flex-col justify-center">
             <div>
               <h2 className="text-xl font-bold md:text-xl">Contact Me</h2>
-              <p className="max-w-2xl mx-auto text-muted-foreground w-full">
+              <p className="max-w-2xl text-muted-foreground w-fll">
                 Let's discuss your next project or just say hello
               </p>
             </div>
@@ -68,10 +68,11 @@ export function ContactSection() {
                   </div>
                   <div>
                     Email
-                    <a href="mailto:mujithaba2001@gmail.com">
-                      <p className="text-muted-foreground">
-                        mujithaba2001@gmail.com
-                      </p>
+                    <a
+                      href="mailto:mujithaba2001@gmail.com"
+                      className="text-muted-foreground  "
+                    >
+                      <p>mujithaba2001@gmail.com</p>
                     </a>
                   </div>
                 </div>
@@ -125,7 +126,7 @@ export function ContactSection() {
                 <Textarea
                   name="message"
                   placeholder="Your message..."
-                  className="min-h-[120px]"
+                  className="min-h-[130px]"
                   required
                 />
                 <Button

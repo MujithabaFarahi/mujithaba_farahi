@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import { ExternalLink, Github } from 'lucide-react';
 import numm from '@/assets/images/numm.jpg';
 import portfolio from '@/assets/images/portfolio.png';
+import cinec from '@/assets/images/cinec.png';
+import invoice from '@/assets/images/invoice.png';
 
 interface Project {
   title: string;
@@ -11,10 +13,47 @@ interface Project {
   image: string;
   technologies: string[];
   liveUrl?: string;
+  apkUrl?: string;
   githubUrl?: string;
 }
 
 const projects: Project[] = [
+  {
+    title: 'Cinema Theatre Ticket Booking App',
+    description:
+      'A Flutter-based mobile app designed for cinema ticket booking. Integrated Firebase Authentication for secure login and used Cloud Firestore for real-time seat availability and booking management.',
+    image: cinec,
+    technologies: [
+      'Flutter',
+      'Dart',
+      'Firebase Authentication',
+      'Cloud Firestore',
+      'Blocs',
+      'Android',
+    ],
+    liveUrl: '',
+    apkUrl:
+      'https://drive.google.com/file/d/1eok83oRgltFDmbv5kj5cmALkK4ytGrWU/view',
+    githubUrl: 'https://github.com/MujithabaFarahi/cinec-movie-booking-app',
+  },
+  {
+    title: 'Invoice Management System',
+    description:
+      'A modern, responsive invoice management system with features for creating, tracking, and managing invoices efficiently.',
+    image: invoice,
+    technologies: [
+      'React',
+      'Typescript',
+      'Firebase Auth',
+      'Firebase Firestore',
+      'Shadcn/ui',
+      'TailwindCSS',
+      'Vite',
+    ],
+    liveUrl:
+      'https://invoice-management-f8g1-go98l9vkf-mujithaba-farahis-projects.vercel.app/login',
+    githubUrl: 'https://github.com/MujithabaFarahi/invoiceManagement',
+  },
   {
     title: 'Stock Management App',
     description:
@@ -29,6 +68,23 @@ const projects: Project[] = [
     ],
     liveUrl: '',
     githubUrl: 'https://github.com/MujithabaFarahi/numm',
+  },
+  {
+    title: 'Portfolio Website',
+    description:
+      'A modern, responsive portfolio website showcasing projects and skills with smooth animations and optimized performance.',
+    image: portfolio,
+    technologies: [
+      'React',
+      'Typescript',
+      'TailwindCSS',
+      'Framer Motion',
+      'Vite',
+      'Shadcn/ui',
+    ],
+    liveUrl:
+      'https://invoice-management-f8g1-go98l9vkf-mujithaba-farahis-projects.vercel.app/login',
+    githubUrl: 'https://github.com/MujithabaFarahi/mujithaba_farahi',
   },
   {
     title: 'React E-Commerce Website',
@@ -71,22 +127,6 @@ const projects: Project[] = [
     liveUrl: '',
     githubUrl: 'https://github.com/MujithabaFarahi/Food-Recipe',
   },
-  {
-    title: 'Portfolio Website',
-    description:
-      'A modern, responsive portfolio website showcasing projects and skills with smooth animations and optimized performance.',
-    image: portfolio,
-    technologies: [
-      'React',
-      'Typscript',
-      'TailwindCSS',
-      'Framer Motion',
-      'Vite',
-      'Shadcn/ui',
-    ],
-    liveUrl: '/',
-    githubUrl: 'https://github.com/MujithabaFarahi/mujithaba_farahi',
-  },
 ];
 
 export function ProjectsSection() {
@@ -125,6 +165,14 @@ export function ProjectsSection() {
                 </div>
 
                 <div className="flex gap-2">
+                  {project.apkUrl && (
+                    <a href={project.apkUrl} target="_blank">
+                      <Button size="sm" className="gap-2">
+                        <ExternalLink className="w-4 h-4" />
+                        Download APK
+                      </Button>
+                    </a>
+                  )}
                   {project.liveUrl && (
                     <a href={project.liveUrl} target="_blank">
                       <Button size="sm" className="gap-2">
